@@ -1,12 +1,12 @@
 {
-    "name": "alecaddd/alecaddd-plugin",
-    "description": "Awesome starter plugin example",
+    "name": "i2ConfiguratorWordpress",
+    "description": "i2Configurator Wordpress Addon",
     "type": "project",
-    "license": "GPL",
+    "license": "",
     "authors": [
         {
-            "name": "Alecaddd",
-            "email": "castellani.ale@gmail.com"
+            "name": "Sebastian Alff",
+            "email": "info@interactiveimpressions.com"
         }
     ],
     "minimum-stability": "dev",

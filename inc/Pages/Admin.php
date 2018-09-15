@@ -1,6 +1,6 @@
 <?php 
 /**
- * @package  AlecadddPlugin
+ * @package  i2ConfiguratorPlugin
  */
 namespace Inc\Pages;
 
@@ -42,10 +42,10 @@ class Admin extends BaseController
 	{
 		$this->pages = array(
 			array(
-				'page_title' => 'Alecaddd Plugin', 
-				'menu_title' => 'Alecaddd', 
+				'page_title' => 'i2Configurator Plugin', 
+				'menu_title' => 'i2Configurator', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'alecaddd_plugin', 
+				'menu_slug' => 'i2Configurator_plugin', 
 				'callback' => array( $this->callbacks, 'adminDashboard' ), 
 				'icon_url' => 'dashicons-store', 
 				'position' => 110
@@ -57,27 +57,27 @@ class Admin extends BaseController
 	{
 		$this->subpages = array(
 			array(
-				'parent_slug' => 'alecaddd_plugin', 
+				'parent_slug' => 'i2Configurator_plugin', 
 				'page_title' => 'Custom Post Types', 
 				'menu_title' => 'CPT', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'alecaddd_cpt', 
+				'menu_slug' => 'i2Configurator_cpt', 
 				'callback' => array( $this->callbacks, 'adminCpt' )
 			),
 			array(
-				'parent_slug' => 'alecaddd_plugin', 
+				'parent_slug' => 'i2Configurator_plugin', 
 				'page_title' => 'Custom Taxonomies', 
 				'menu_title' => 'Taxonomies', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'alecaddd_taxonomies', 
+				'menu_slug' => 'i2Configurator_taxonomies', 
 				'callback' => array( $this->callbacks, 'adminTaxonomy' )
 			),
 			array(
-				'parent_slug' => 'alecaddd_plugin', 
+				'parent_slug' => 'i2Configurator_plugin', 
 				'page_title' => 'Custom Widgets', 
 				'menu_title' => 'Widgets', 
 				'capability' => 'manage_options', 
-				'menu_slug' => 'alecaddd_widgets', 
+				'menu_slug' => 'i2Configurator_widgets', 
 				'callback' => array( $this->callbacks, 'adminWidget' )
 			)
 		);
@@ -87,12 +87,12 @@ class Admin extends BaseController
 	{
 		$args = array(
 			array(
-				'option_group' => 'alecaddd_options_group',
+				'option_group' => 'i2Configurator_options_group',
 				'option_name' => 'text_example',
-				'callback' => array( $this->callbacks, 'alecadddOptionsGroup' )
+				'callback' => array( $this->callbacks, 'i2ConfiguratorOptionsGroup' )
 			),
 			array(
-				'option_group' => 'alecaddd_options_group',
+				'option_group' => 'i2Configurator_options_group',
 				'option_name' => 'first_name'
 			)
 		);
@@ -104,10 +104,10 @@ class Admin extends BaseController
 	{
 		$args = array(
 			array(
-				'id' => 'alecaddd_admin_index',
+				'id' => 'i2Configurator_admin_index',
 				'title' => 'Settings',
-				'callback' => array( $this->callbacks, 'alecadddAdminSection' ),
-				'page' => 'alecaddd_plugin'
+				'callback' => array( $this->callbacks, 'i2ConfiguratorAdminSection' ),
+				'page' => 'i2Configurator_plugin'
 			)
 		);
 
@@ -120,9 +120,9 @@ class Admin extends BaseController
 			array(
 				'id' => 'text_example',
 				'title' => 'Text Example',
-				'callback' => array( $this->callbacks, 'alecadddTextExample' ),
-				'page' => 'alecaddd_plugin',
-				'section' => 'alecaddd_admin_index',
+				'callback' => array( $this->callbacks, 'i2ConfiguratorTextExample' ),
+				'page' => 'i2Configurator_plugin',
+				'section' => 'i2Configurator_admin_index',
 				'args' => array(
 					'label_for' => 'text_example',
 					'class' => 'example-class'
@@ -131,9 +131,9 @@ class Admin extends BaseController
 			array(
 				'id' => 'first_name',
 				'title' => 'First Name',
-				'callback' => array( $this->callbacks, 'alecadddFirstName' ),
-				'page' => 'alecaddd_plugin',
-				'section' => 'alecaddd_admin_index',
+				'callback' => array( $this->callbacks, 'i2ConfiguratorFirstName' ),
+				'page' => 'i2Configurator_plugin',
+				'section' => 'i2Configurator_admin_index',
 				'args' => array(
 					'label_for' => 'first_name',
 					'class' => 'example-class'

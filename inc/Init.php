@@ -1,6 +1,6 @@
 <?php
 /**
- * @package  AlecadddPlugin
+ * @package  i2ConfiguratorPlugin
  */
 namespace Inc;
 
