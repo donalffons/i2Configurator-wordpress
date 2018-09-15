@@ -22,7 +22,7 @@ class Enqueue extends BaseController
 
 		$css_files = [
 			'css/main.css',
-			'css/light.css',
+			'css/dark.css',
 			'css/my.css',
 			
 			'three.js/editor/js/libs/codemirror/codemirror.css',
