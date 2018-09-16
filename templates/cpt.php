@@ -52,6 +52,7 @@
 			$(document).ready(function() {
 				setCurrentModelAndVariant(() => {
 					loadingScreen.show();
+					seti2ConfiguratorFolder("/wp-content/plugins/i2Configurator-wordpress/")
 					LoadModel(() => {
 						LoadVariant();
 						loadingScreen.hide();
